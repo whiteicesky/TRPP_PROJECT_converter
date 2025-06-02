@@ -43,6 +43,8 @@
 
 ```pip install matplotlib ```
 
+Либо воспользуйтесь командой ```pip install -r requirements.txt```
+
 Код проекта и файл с зависимостями лежат в ветке master
 
 Внешний вид приложения:
