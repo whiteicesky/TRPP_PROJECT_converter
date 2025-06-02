@@ -49,6 +49,5 @@
 
 Внешний вид приложения:
 ![screen1](Screenshot_1.png)
-![screen1](Screenshot_2.png)
-![screen1](Screenshot_3.png)
-![screen1](Screenshot_4.png)
+![screen2](Screenshot_2.png)
+![screen3](Screenshot_3.png)
