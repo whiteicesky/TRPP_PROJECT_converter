@@ -1,0 +1,30 @@
+# Используем официальный образ Python 3.11 на основе Ubuntu
+FROM python:3.11-slim
+
+# Устанавливаем зависимости для работы GUI (Tkinter) и X11
+RUN apt-get update && apt-get install -y \
+    libx11-6 \
+    libxext-dev \
+    libxrender-dev \
+    libxinerama-dev \
+    libxi-dev \
+    libxrandr-dev \
+    libxcursor-dev \
+    libxtst-dev \
+    tk \
+    && rm -rf /var/lib/apt/lists/*
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем файлы проекта
+COPY . .
+
+# Устанавливаем Python-зависимости
+RUN pip install --no-cache-dir customtkinter requests matplotlib
+
+# Указываем переменную окружения для правильной работы GUI
+ENV DISPLAY=:0
+
+# Команда для запуска приложения
+CMD ["python", "main.py"]
